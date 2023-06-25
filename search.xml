@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Words test</title>
+    <title>图片测试</title>
+    <url>/p/b211d196.html</url>
+    <content><![CDATA[<h1 id="图片测试环节"><a href="#图片测试环节" class="headerlink" title="图片测试环节"></a>图片测试环节</h1><p><img src="/p/b211d196/testpic1.jpg" alt="图片测试" title="autumn"></p>]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>测试文字计数功能</title>
     <url>/p/c0e26dd6.html</url>
-    <content><![CDATA[<p>#测试一下文字计数功能</p>
-<p>正文部分<br>随便写点东西</p>
-<p>##code</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">test</span></span><br><span class="line"><span class="built_in">test</span> 中文</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h1 id="测试文字计数功能"><a href="#测试文字计数功能" class="headerlink" title="测试文字计数功能"></a>测试文字计数功能</h1><p>正文部分<br>随便写点东西</p>
+<h2 id="code"><a href="#code" class="headerlink" title="code"></a>code</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">test</span></span><br><span class="line"><span class="built_in">test</span> 中文</span><br></pre></td></tr></table></figure>
 <p><strong>加粗test</strong></p>
 <p><del>横线test</del></p>
 <p><em>斜体test</em></p>
