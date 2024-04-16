@@ -31,7 +31,14 @@
 
 
 
-<h1 id="标题一"><a href="#标题一" class="headerlink" title="标题一"></a>标题一</h1><h2 id="标题二"><a href="#标题二" class="headerlink" title="标题二"></a>标题二</h2><h3 id="标题三"><a href="#标题三" class="headerlink" title="标题三"></a>标题三</h3><h4 id="标题四"><a href="#标题四" class="headerlink" title="标题四"></a>标题四</h4><h5 id="标题五"><a href="#标题五" class="headerlink" title="标题五"></a>标题五</h5>]]></content>
+<h1 id="标题一"><a href="#标题一" class="headerlink" title="标题一"></a>标题一</h1><h2 id="标题二"><a href="#标题二" class="headerlink" title="标题二"></a>标题二</h2><h3 id="标题三"><a href="#标题三" class="headerlink" title="标题三"></a>标题三</h3><h4 id="标题四"><a href="#标题四" class="headerlink" title="标题四"></a>标题四</h4><h5 id="标题五"><a href="#标题五" class="headerlink" title="标题五"></a>标题五</h5><p>\usepackage{mathtools}<br>\usepackage{amssymb}</p>
+<p>$$m&#x3D; _{(n)}p$$<br>$$n\ |\ (m-p)$$<br>$$m-p&#x3D;kn$$<br>As $k$ is an integer.</p>
+<p>There must exist a k that satisfied:<br>$$<br>k &#x3D; \lfloor \frac{m}{n} \rfloor - \lfloor \frac{p}{n} \rfloor<br>$$</p>
+<p>\begin{alien*}</p>
+<p>m-p&amp;&#x3D; (\lfloor \frac{m}{n} \rfloor - \lfloor \frac{p}{n} \rfloor)  n\</p>
+<p>m - \lfloor \frac{m}{n} \rfloor n &#x3D; p - \lfloor \frac{p}{n} \rfloor n</p>
+<p>m%n &#x3D; p%n</p>
+<p>\end{alien*}</p>]]></content>
       <categories>
         <category>初期测试存档</category>
       </categories>
@@ -65,7 +72,7 @@
 <li>Ω, Θ<br>Big Omega Ω<br>如果存在常数c，n<sub>0</sub>, 且n<sub>0</sub> &gt; 1, 对于任给n &gt;&#x3D; n<sub>0</sub><br>使得f(n) &gt;&#x3D; c * g(n)成立<br>Big Theta Θ<br>如果存在常数c<sub>1</sub>，n<sub>0</sub>, c<sub>2</sub>, 且n<sub>0</sub> &gt; 1, 对于任给n &gt;&#x3D; n<sub>0</sub><br>使得c<sub>1</sub> * g(n) &lt;&#x3D; f(n) &lt;&#x3D; c<sub>2</sub> * g(n)成立</li>
 <li>链表 Linked List<br>每个格子都要有两个元素<br>（1）存储本身的数据<br>（2）指针，指向下一个数据的地址<br>每个链表的第一格head of list, 是指向该链表的指针<br>最后一格的指针，指向NULL。意为链表结束。<br>(睡醒施工)</li>
 </ol>
-<h2 id="Week-3-Dynamic-data-structures"><a href="#Week-3-Dynamic-data-structures" class="headerlink" title="Week 3: Dynamic data structures"></a>Week 3: Dynamic data structures</h2><h2 id="Week-4-Graph-data-structures"><a href="#Week-4-Graph-data-structures" class="headerlink" title="Week 4: Graph data structures"></a>Week 4: Graph data structures</h2><h2 id="Week-5-Graph-algorithms"><a href="#Week-5-Graph-algorithms" class="headerlink" title="Week 5: Graph algorithms"></a>Week 5: Graph algorithms</h2><h2 id="Week-7-Search-trees"><a href="#Week-7-Search-trees" class="headerlink" title="Week 7: Search trees"></a>Week 7: Search trees</h2><h2 id="Week-8-Search-tree-algorithms"><a href="#Week-8-Search-tree-algorithms" class="headerlink" title="Week 8: Search tree algorithms"></a>Week 8: Search tree algorithms</h2><h2 id="Week-9-Text-processing-algorithms-Approximation"><a href="#Week-9-Text-processing-algorithms-Approximation" class="headerlink" title="Week 9: Text processing algorithms, Approximation"></a>Week 9: Text processing algorithms, Approximation</h2><h2 id="Week-10-Randomised-algorithms"><a href="#Week-10-Randomised-algorithms" class="headerlink" title="Week 10: Randomised algorithms"></a>Week 10: Randomised algorithms</h2>]]></content>
+<h2 id="Week-3-Dynamic-data-structures"><a href="#Week-3-Dynamic-data-structures" class="headerlink" title="Week 3: Dynamic data structures"></a>Week 3: Dynamic data structures</h2><h2 id="Week-4-Graph-data-structuresk"><a href="#Week-4-Graph-data-structuresk" class="headerlink" title="Week 4: Graph data structuresk"></a>Week 4: Graph data structuresk</h2><h2 id="Week-5-Graph-algorithms"><a href="#Week-5-Graph-algorithms" class="headerlink" title="Week 5: Graph algorithms"></a>Week 5: Graph algorithms</h2><h2 id="Week-7-Search-trees"><a href="#Week-7-Search-trees" class="headerlink" title="Week 7: Search trees"></a>Week 7: Search trees</h2><h2 id="Week-8-Search-tree-algorithms"><a href="#Week-8-Search-tree-algorithms" class="headerlink" title="Week 8: Search tree algorithms"></a>Week 8: Search tree algorithms</h2><h2 id="Week-9-Text-processing-algorithms-Approximation"><a href="#Week-9-Text-processing-algorithms-Approximation" class="headerlink" title="Week 9: Text processing algorithms, Approximation"></a>Week 9: Text processing algorithms, Approximation</h2><h2 id="Week-10-Randomised-algorithms"><a href="#Week-10-Randomised-algorithms" class="headerlink" title="Week 10: Randomised algorithms"></a>Week 10: Randomised algorithms</h2>]]></content>
       <categories>
         <category>学习笔记区</category>
       </categories>
