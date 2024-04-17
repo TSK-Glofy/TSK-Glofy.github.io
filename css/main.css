@@ -1,5 +1,5 @@
 :root {
-  --body-bg-color: #f5f7f9;
+  --body-bg-color: #eee;
   --content-bg-color: #fff;
   --card-bg-color: #f5f5f5;
   --text-color: #555;
@@ -374,6 +374,45 @@ td {
   License: see project LICENSE
   Touched: 2021
 */pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{background:#f3f3f3;color:#444}.hljs-comment{color:#697070}.hljs-punctuation,.hljs-tag{color:#444a}.hljs-tag .hljs-attr,.hljs-tag .hljs-name{color:#444}.hljs-attribute,.hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-name,.hljs-selector-tag{font-weight:700}.hljs-deletion,.hljs-number,.hljs-quote,.hljs-selector-class,.hljs-selector-id,.hljs-string,.hljs-template-tag,.hljs-type{color:#800}.hljs-section,.hljs-title{color:#800;font-weight:700}.hljs-link,.hljs-operator,.hljs-regexp,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-symbol,.hljs-template-variable,.hljs-variable{color:#ab5656}.hljs-literal{color:#695}.hljs-addition,.hljs-built_in,.hljs-bullet,.hljs-code{color:#397300}.hljs-meta{color:#1f7199}.hljs-meta .hljs-string{color:#38a}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+.highlight:hover .copy-btn,
+pre:hover .copy-btn {
+  opacity: 1;
+}
+figure.highlight .table-container {
+  position: relative;
+}
+.copy-btn {
+  color: #333;
+  cursor: pointer;
+  line-height: 1.6;
+  opacity: 0;
+  padding: 2px 6px;
+  position: absolute;
+  transition: opacity 0.2s ease-in-out;
+  color: var(--highlight-foreground);
+  font-size: 14px;
+  right: 0;
+  top: 2px;
+}
+figure.highlight {
+  border-radius: 5px;
+  box-shadow: 0 10px 30px 0 rgba(0,0,0,0.4);
+  padding-top: 30px;
+}
+figure.highlight .table-container {
+  border-radius: 0 0 5px 5px;
+}
+figure.highlight::before {
+  background: #fc625d;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  left: 12px;
+  margin-top: -20px;
+  position: absolute;
+  border-radius: 50%;
+  content: ' ';
+  height: 12px;
+  width: 12px;
+}
 code,
 kbd,
 figure.highlight,
@@ -2317,7 +2356,7 @@ mark.search-keyword {
 header.header {
   background: var(--content-bg-color);
   border-radius: 20px 20px 20px 20px;
-  box-shadow: initial;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
 }
 @media (max-width: 991px) {
   header.header {
@@ -2495,7 +2534,7 @@ header.header {
 .sidebar-inner {
   background: var(--content-bg-color);
   border-radius: 20px;
-  box-shadow: initial;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   box-sizing: border-box;
   color: var(--text-color);
   margin-top: 12px;
@@ -2546,122 +2585,107 @@ header.header {
 .links-of-author-item a:hover {
   background: var(--body-bg-color);
 }
-.main-inner {
+.main-inner .sub-menu,
+.main-inner .post-block,
+.main-inner .tabs-comment,
+.main-inner > .comments,
+.main-inner .comment-position .comments,
+.main-inner .pagination {
   background: var(--content-bg-color);
-  box-shadow: initial;
-  padding: 40px;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
 }
-@media (max-width: 991px) {
-  .main-inner {
-    padding: 20px;
+.main-inner .post-block:not(:first-child):not(:first-child) {
+  border-radius: 20px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
+  margin-top: 12px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-inner .post-block:not(:first-child):not(:first-child) {
+    margin-top: 10px;
   }
 }
-.sub-menu {
-  border-bottom: 1px solid #ddd;
+@media (max-width: 767px) {
+  .main-inner .post-block:not(:first-child):not(:first-child) {
+    margin-top: 8px;
+  }
 }
-.post-block:first-of-type {
-  padding-top: 40px;
+.main-inner .tabs-comment,
+.main-inner > .comments,
+.main-inner .comment-position .comments,
+.main-inner .pagination {
+  border-radius: 20px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
+  margin-top: 12px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-inner .tabs-comment,
+  .main-inner > .comments,
+  .main-inner .comment-position .comments,
+  .main-inner .pagination {
+    margin-top: 10px;
+  }
 }
 @media (max-width: 767px) {
-  .pagination {
-    margin-bottom: 10px;
+  .main-inner .tabs-comment,
+  .main-inner > .comments,
+  .main-inner .comment-position .comments,
+  .main-inner .pagination {
+    margin-top: 8px;
+  }
+}
+.post-block,
+.comments {
+  padding: 40px;
+}
+.post-eof {
+  display: none;
+}
+.pagination {
+  border-top: initial;
+  padding: 10px 0;
+}
+.post-body h1,
+.post-body h2 {
+  border-bottom: 1px solid #eee;
+}
+.post-body h3 {
+  border-bottom: 1px dotted #eee;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-inner {
+    padding: 10px;
+  }
+  .posts-expand .post-button {
+    margin-top: 20px;
+  }
+  .post-block {
+    padding: 20px;
+  }
+  .comments {
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 767px) {
+  .main-inner {
+    padding: 8px;
+  }
+  .posts-expand .post-button {
+    margin: 12px 0;
+  }
+  .post-block {
+    padding: 12px;
+  }
+  .comments {
+    padding: 10px 12px;
   }
 }
 body {
-  background-image: url("");
+  background-image: url("/images/月のある地底界.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100% 100%;
+  background-size: 100%;
 }
-.post-block {
-  opacity: 0.9;
-}
-.sidebar {
-  background-color: transparent;
-  opacity: 0.9;
-}
-.header-inner {
-  background: rgba(255,255,255,0.9);
-}
-.popup {
-  opacity: 0.9;
-}
-.fa {
-  font-size: 14px;
-}
-.fa-home {
-  color: #e74c3c;
-  font-size: 15px;
-}
-.fa-archive {
-  color: #1abc9c;
-}
-.fa-tags {
-  color: #ffa500;
-}
-.fa-chalkboard {
-  color: #3498db;
-}
-.fa-link {
-  color: #fc427b;
-}
-.fa-user {
-  color: #9b59b6;
-}
-.fa-camera {
-  color: #1abc9c;
-}
-.fa-envelope {
-  color: #fc427b;
-}
-.fa-zhihu {
-  color: #00f;
-}
-.fa-calendar-check {
-  color: #f00;
-}
-.fa-eye {
-  color: #70a1ff;
-}
-.fa-comment {
-  color: #2ed573;
-}
-.fa-comments {
-  color: #2ed573;
-}
-.fa-file-word {
-  color: #273c75;
-}
-.fa-clock {
-  color: #ff5252;
-}
-.fa-image {
-  color: #fc427b;
-}
-.fa-sun {
-  color: #ffa500;
-}
-.fa-bookmark {
-  color: #0ff;
-}
-.fa-book {
-  color: #1abc9c;
-}
-.fa-images {
-  color: #f0f;
-}
-.fa-windows {
-  color: #e74c3c;
-}
-.fa-chrome {
-  color: #ffa500;
-}
-.fa-desktop {
-  color: #3498db;
-}
-.fa-tools {
-  color: #0ff;
-}
-.fa-python {
-  color: #3498db;
+:root {
+  --content-bg-color: rgba(255,255,255,0.902);
 }
