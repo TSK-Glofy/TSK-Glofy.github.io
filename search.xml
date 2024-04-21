@@ -250,7 +250,7 @@ Assignment中提供的指令如下</li>
 <ol start="4">
 <li>激活虚拟环境</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> Ass3</span><br><span class="line">$ .\Scripts\activate.bat</span><br><span class="line"></span><br><span class="line"><span class="comment"># 看到前面()里带有Ass3则成功</span></span><br><span class="line">(Ass3) D:\YXF Study Data\2023.5 - 2025.5 UNSW\2024.2 - 2024.5 T1\COMP9321\Ass3&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用deactivate命令结束使用</span></span><br><span class="line">(Ass3) D:\YXF Study Data\2023.5 - 2025.5 UNSW\2024.2 - 2024.5 T1\COMP9321\Ass3&gt;deactivate</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> Ass3</span><br><span class="line">$ .\Scripts\activate.bat</span><br><span class="line"></span><br><span class="line"><span class="comment"># 看到前面()里带有Ass3则成功</span></span><br><span class="line">(Ass3) D:\YXF Study Data\2023.5 - 2025.5 UNSW\2024.2 - 2024.5 T1\COMP9321\Ass3&gt;</span><br></pre></td></tr></table></figure>
 <ol start="5">
 <li>安装需要的库<br>
 老师多半是会提供这次作业需要什么库，名为<code>requirements.txt</code>。把这个文件放到你的作业路径中，使用如下命令安装</li>
