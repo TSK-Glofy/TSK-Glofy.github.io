@@ -261,7 +261,7 @@ Assignment中提供的指令如下</li>
 <ol start="6">
 <li>用VS code打开工作区</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code Ass3</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code <span class="string">&quot;D:\YXF Study Data\2023.5 - 2025.5 UNSW\2024.2 - 2024.5 T1\COMP9321\Ass3&quot;</span></span><br></pre></td></tr></table></figure>
 <ol start="7">
 <li>关闭虚拟环境</li>
 </ol>
