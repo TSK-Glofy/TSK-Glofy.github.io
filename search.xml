@@ -36,7 +36,8 @@
 双击<code>Path</code>或者点击<code>编辑</code>，<code>新建</code>，把<code>...\TDM-GCC-64\x86_64-w64-mingw32\bin</code>复制进去<br>
 最后把该目录下的<code>mingw32-make.exe</code>重命名为<code>make.exe</code>就可以在本地用老师给的makefile了</p>
 <h1 id="期末抱佛脚复习部分"><a class="markdownIt-Anchor" href="#期末抱佛脚复习部分"></a> 期末抱佛脚复习部分</h1>
-<h2 id="week-1-elementary-data-and-control-structures-in-c"><a class="markdownIt-Anchor" href="#week-1-elementary-data-and-control-structures-in-c"></a> Week 1 Elementary data and control structures in C</h2>
+<h2 id="期中之前的知识"><a class="markdownIt-Anchor" href="#期中之前的知识"></a> 期中之前的知识</h2>
+<h3 id="week-1-elementary-data-and-control-structures-in-c"><a class="markdownIt-Anchor" href="#week-1-elementary-data-and-control-structures-in-c"></a> Week 1 Elementary data and control structures in C</h3>
 <ol>
 <li>浮点数</li>
 </ol>
@@ -71,7 +72,7 @@ int型占4字节</li>
 assert可以在不满足条件时，直接弹出程序</li>
 <li>static可以定义数据为本地类型</li>
 </ol>
-<h2 id="week-2-analysis-of-algorithms"><a class="markdownIt-Anchor" href="#week-2-analysis-of-algorithms"></a> Week 2: Analysis of Algorithms</h2>
+<h3 id="week-2-analysis-of-algorithms"><a class="markdownIt-Anchor" href="#week-2-analysis-of-algorithms"></a> Week 2: Analysis of Algorithms</h3>
 <ol>
 <li>时间复杂度O(n)<br>
 对于一个程序，假设它需要运行f(n)次<br>
@@ -98,15 +99,21 @@ Big Theta Θ<br>
 （2）指针，指向下一个数据的地址<br>
 每个链表的第一格head of list, 是指向该链表的指针<br>
 最后一格的指针，指向NULL。意为链表结束。<br>
-(睡醒施工)</li>
+(睡醒施工)<br>
+剩下的应该是不会再写了</li>
 </ol>
-<h2 id="week-3-dynamic-data-structures"><a class="markdownIt-Anchor" href="#week-3-dynamic-data-structures"></a> Week 3: Dynamic data structures</h2>
-<h2 id="week-4-graph-data-structuresk"><a class="markdownIt-Anchor" href="#week-4-graph-data-structuresk"></a> Week 4: Graph data structuresk</h2>
-<h2 id="week-5-graph-algorithms"><a class="markdownIt-Anchor" href="#week-5-graph-algorithms"></a> Week 5: Graph algorithms</h2>
-<h2 id="week-7-search-trees"><a class="markdownIt-Anchor" href="#week-7-search-trees"></a> Week 7: Search trees</h2>
-<h2 id="week-8-search-tree-algorithms"><a class="markdownIt-Anchor" href="#week-8-search-tree-algorithms"></a> Week 8: Search tree algorithms</h2>
-<h2 id="week-9-text-processing-algorithms-approximation"><a class="markdownIt-Anchor" href="#week-9-text-processing-algorithms-approximation"></a> Week 9: Text processing algorithms, Approximation</h2>
-<h2 id="week-10-randomised-algorithms"><a class="markdownIt-Anchor" href="#week-10-randomised-algorithms"></a> Week 10: Randomised algorithms</h2>
+<ul>
+<li>Week 3: Dynamic data structures</li>
+<li>Week 4: Graph data structuresk</li>
+<li>Week 5: Graph algorithms</li>
+<li>Week 7: Search trees</li>
+<li>Week 8: Search tree algorithms</li>
+<li>Week 9: Text processing algorithms, Approximation</li>
+<li>Week 10: Randomised algorithms</li>
+</ul>
+<h2 id="期末用的cheat-sheet"><a class="markdownIt-Anchor" href="#期末用的cheat-sheet"></a> 期末用的Cheat Sheet</h2>
+<p><img src="/p/826f1970/CheatSheet1.jpg" alt="826f1970" title="1"><br>
+<img src="/p/826f1970/CheatSheet2.jpg" alt="826f1970" title="2"></p>
 ]]></content>
       <categories>
         <category>学习笔记区</category>
