@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"tsk-glofy.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="记录一下从0开始搭建一个树莓派minecraft服务器，并且使用FRP内网穿透到公网">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从0开始的树莓派搭建教程">
+<meta property="og:url" content="https://tsk-glofy.github.io/p/52c73bb6.html">
+<meta property="og:site_name" content="UNSW转码日记">
+<meta property="og:description" content="记录一下从0开始搭建一个树莓派minecraft服务器，并且使用FRP内网穿透到公网">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-08-05T08:53:40.000Z">
+<meta property="article:modified_time" content="2025-08-06T19:05:05.812Z">
+<meta property="article:author" content="Glofy Yuan">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://tsk-glofy.github.io/p/52c73bb6.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://tsk-glofy.github.io/p/52c73bb6.html","path":"p/52c73bb6.html","title":"从0开始的树莓派搭建教程"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>从0开始的树莓派搭建教程 | UNSW转码日记</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">UNSW转码日记</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-时间线"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>时间线</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text"> 硬件准备工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%A0%91%E8%8E%93%E6%B4%BE"><span class="nav-number">2.</span> <span class="nav-text"> 配置树莓派</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BA%E5%AE%9A%E6%A0%91%E8%8E%93%E6%B4%BE%E7%9A%84%E9%9D%99%E6%80%81ip"><span class="nav-number">2.1.</span> <span class="nav-text"> 固定树莓派的静态IP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%90%AFvnc%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2"><span class="nav-number">2.2.</span> <span class="nav-text"> 开启VNC远程桌面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85java"><span class="nav-number">2.3.</span> <span class="nav-text"> 安装java</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDmc%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="nav-number">2.4.</span> <span class="nav-text"> 下载mc服务端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEfrp"><span class="nav-number">2.5.</span> <span class="nav-text"> 配置frp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85tmux"><span class="nav-number">2.6.</span> <span class="nav-text"> 安装tmux</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEvps"><span class="nav-number">3.</span> <span class="nav-text"> 配置VPS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEfrp-2"><span class="nav-number">3.1.</span> <span class="nav-text"> 配置frp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8Cfrp"><span class="nav-number">3.2.</span> <span class="nav-text"> 后台运行frp</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%AD%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">4.</span> <span class="nav-text"> 在树莓派中启动服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E5%86%99start%E8%84%9A%E6%9C%AC"><span class="nav-number">4.1.</span> <span class="nav-text"> 编写start脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8Cfrp%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">4.2.</span> <span class="nav-text"> 运行frp和服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8Cfrp"><span class="nav-number">4.2.1.</span> <span class="nav-text"> 运行frp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">4.2.2.</span> <span class="nav-text"> 运行服务器</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%AF%E9%80%89%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D"><span class="nav-number">5.</span> <span class="nav-text"> （可选）配置域名</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Glofy Yuan"
+      src="/uploads/avatar.png">
+  <p class="site-author-name" itemprop="name">Glofy Yuan</p>
+  <div class="site-description" itemprop="description">在UNSW的牛马日子</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/TSK-Glofy" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;TSK-Glofy" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/xiaofei-yuan/" title="Linkedin → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;xiaofei-yuan&#x2F;" rel="noopener me" target="_blank"><i class="fab fa-linkedin fa-fw"></i>Linkedin</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/2603125425" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2603125425" rel="noopener me" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.instagram.com/tsk_glofy/" title="Instagram → https:&#x2F;&#x2F;www.instagram.com&#x2F;tsk_glofy&#x2F;" rel="noopener me" target="_blank"><i class="fab fa-instagram fa-fw"></i>Instagram</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/8286685" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;8286685" rel="noopener me" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:glofy.yuan@gmail.com" title="E-Mail → mailto:glofy.yuan@gmail.com" rel="noopener me" target="_blank"><i class="fa-solid fa-envelope-open-text fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://tsk-glofy.github.io/p/52c73bb6.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="name" content="Glofy Yuan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="UNSW转码日记">
+      <meta itemprop="description" content="在UNSW的牛马日子">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="从0开始的树莓派搭建教程 | UNSW转码日记">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          从0开始的树莓派搭建教程
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-08-05 18:53:40" itemprop="dateCreated datePublished" datetime="2025-08-05T18:53:40+10:00">2025-08-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-08-07 05:05:05" itemprop="dateModified" datetime="2025-08-07T05:05:05+10:00">2025-08-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%8C%BA/" itemprop="url" rel="index"><span itemprop="name">学习笔记区</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/p/52c73bb6.html" class="post-meta-item leancloud_visitors" data-flag-title="从0开始的树莓派搭建教程" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Valine：</span>
+  
+    <a title="valine" href="/p/52c73bb6.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/p/52c73bb6.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="硬件准备工作"><a class="markdownIt-Anchor" href="#硬件准备工作"></a> 硬件准备工作</h1>
+<p>一台空闲的树莓派，一台有公网IP地址的VPS服务器</p>
+<h1 id="配置树莓派"><a class="markdownIt-Anchor" href="#配置树莓派"></a> 配置树莓派</h1>
+<p>安装树莓派OS镜像，配置用户名密码<br>
+给树莓派通电</p>
+<h2 id="固定树莓派的静态ip"><a class="markdownIt-Anchor" href="#固定树莓派的静态ip"></a> 固定树莓派的静态IP</h2>
+<p>打开路由器设置面板，找到DHCP静态IP分配，给树莓派固定一个IP<br>
+如果忘了也可以用指令查看树莓派的IP</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">hostname -I <span class="comment"># 示例输出：192.168.2.102</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="开启vnc远程桌面"><a class="markdownIt-Anchor" href="#开启vnc远程桌面"></a> 开启VNC远程桌面</h2>
+<p>登录ssh开启设置面板</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">sudo raspi-config</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>选择 <strong>Interface Options</strong></li>
+<li>选择 <strong>VNC</strong></li>
+<li><strong>Would you like the VNC Server to be enabled?</strong> 选择 <strong>YES</strong></li>
+</ol>
+<p>打开自己电脑上的VNC软件，使用用户名密码登录虚拟桌面</p>
+<h2 id="安装java"><a class="markdownIt-Anchor" href="#安装java"></a> 安装java</h2>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo -i <span class="comment"># 临时获得管理员权限</span></span><br><span class="line">$ <span class="built_in">cd</span> /usr/local</span><br></pre></td></tr></table></figure>
+<p>打开树莓派的浏览器 下载<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/downloads/#java21">jdk</a>，此时文件会在<code>/home/&lt;你的用户名&gt;/Downloads/</code>目录下</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> java</span><br><span class="line">$ <span class="built_in">mv</span> /home/&lt;你的用户名&gt;/Downloads/* /usr/local/java/</span><br><span class="line">$ <span class="built_in">cd</span> java</span><br><span class="line">$ tar -zxvf jdk-21_linux-aarch64_bin.tar.gz</span><br><span class="line"><span class="comment"># 会输出一些日志</span></span><br></pre></td></tr></table></figure>
+<p>配置环境变量</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nano /etc/profile</span><br></pre></td></tr></table></figure>
+<p>在文件最后添加</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># jdk版本号可能不同，注意辨别</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/usr/local/java/jdk-21.0.8</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib/</span><br><span class="line"><span class="built_in">export</span> PATH=.:<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="comment"># 退出方法：Ctrl+O，Enter，Ctrl+X</span></span><br></pre></td></tr></table></figure>
+<p>重载文件</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
+<p>检查是否安装成功</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ java -version</span><br><span class="line"></span><br><span class="line"><span class="comment"># 看见如下类似输出则表示成功</span></span><br><span class="line">java version <span class="string">&quot;21.0.8&quot;</span> 2025-07-15 LTS</span><br><span class="line">Java(TM) SE Runtime Environment (build 21.0.8+12-LTS-250)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 21.0.8+12-LTS-250, mixed mode, sharing)</span><br></pre></td></tr></table></figure>
+<h2 id="下载mc服务端"><a class="markdownIt-Anchor" href="#下载mc服务端"></a> 下载mc服务端</h2>
+<p>打开浏览器下载安装包，我用<a target="_blank" rel="noopener" href="https://fabricmc.net/use/server/">fabric</a>端</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> .. <span class="comment"># 应该退回至/usr/local/</span></span><br><span class="line">$ <span class="built_in">mkdir</span> minecraft</span><br><span class="line">$ <span class="built_in">mv</span> /home/&lt;你的用户名&gt;/Downloads/* /usr/local/minecraft</span><br></pre></td></tr></table></figure>
+<p>首次运行必定失败，因为没有同意eula协议</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 我的树莓派8G，这里配置4G内存</span></span><br><span class="line"><span class="comment"># 注意安装包的名字，版本不同，名字必定不一样</span></span><br><span class="line">$ java -Xmx4G -jar fabric-server-mc.1.21.1-loader.0.17.0-launcher.1.1.0.jar</span><br></pre></td></tr></table></figure>
+<p>同意eula协议</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ nano eula.txt <span class="comment"># 将其改为eula=true</span></span><br><span class="line">$ <span class="comment"># 退出方法：Ctrl+O，Enter，Ctrl+X</span></span><br></pre></td></tr></table></figure>
+<h2 id="配置frp"><a class="markdownIt-Anchor" href="#配置frp"></a> 配置frp</h2>
+<p>树莓派是arm架构，下载<a target="_blank" rel="noopener" href="https://github.com/fatedier/frp/releases">frp</a>，本文编写的时候最新版本为0.63.0</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> .. <span class="comment"># 当前的目录应该在/usr/local/java</span></span><br><span class="line">$ wget https://github.com/fatedier/frp/releases/download/v0.63.0/frp_0.63.0_linux_arm64.tar.gz</span><br><span class="line"><span class="comment"># 会输出一些日志</span></span><br><span class="line">$ tar -zxvf frp_0.63.0_linux_arm64.tar.gz</span><br><span class="line"><span class="comment"># 会输出一些日志</span></span><br><span class="line">$ <span class="built_in">mv</span> frp_0.63.0_linux_arm64 frp <span class="comment"># 改个名字方便后续操作</span></span><br></pre></td></tr></table></figure>
+<p>编辑配置信息</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> frp</span><br><span class="line">$ nano frpc.toml <span class="comment"># 这里frpc中的c代表client客户端</span></span><br></pre></td></tr></table></figure>
+<p>编辑<code>frpc.toml</code></p>
+<figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">serverAddr</span> = <span class="string">&quot;VPS公网IP地址&quot;</span></span><br><span class="line"><span class="attr">serverPort</span> = <span class="number">7000</span> <span class="comment"># 默认值</span></span><br><span class="line"><span class="attr">auth.method</span> = <span class="string">&quot;token&quot;</span></span><br><span class="line"><span class="attr">auth.token</span> = <span class="string">&quot;设一个密码&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="section">[[proxies]]</span></span><br><span class="line"><span class="attr">name</span> = <span class="string">&quot;取一个服务名字&quot;</span></span><br><span class="line"><span class="attr">type</span> = <span class="string">&quot;tcp&quot;</span></span><br><span class="line"><span class="attr">localIP</span> = <span class="string">&quot;192.168.2.102&quot;</span> <span class="comment"># 树莓派IP地址</span></span><br><span class="line"><span class="attr">localPort</span> = <span class="number">25565</span> <span class="comment"># mc开服默认值</span></span><br><span class="line"><span class="attr">remotePort</span> = <span class="number">25565</span> <span class="comment"># mc开服默认值</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 退出方法：Ctrl+O，Enter，Ctrl+X</span></span><br></pre></td></tr></table></figure>
+<h2 id="安装tmux"><a class="markdownIt-Anchor" href="#安装tmux"></a> 安装tmux</h2>
+<p>本文使用tmux实现，也有screen的用法，但是我喜欢tmux。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">apt install tmux</span></span><br></pre></td></tr></table></figure>
+<h1 id="配置vps"><a class="markdownIt-Anchor" href="#配置vps"></a> 配置VPS</h1>
+<p>ssh登录邮件里的root账户</p>
+<h2 id="配置frp-2"><a class="markdownIt-Anchor" href="#配置frp-2"></a> 配置frp</h2>
+<p>在VPS端安装<a target="_blank" rel="noopener" href="https://github.com/fatedier/frp/releases">frp</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> /usr/local</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">wget https://github.com/fatedier/frp/releases/download/v0.63.0/frp_0.63.0_linux_amd64.tar.gz</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="comment"># 会输出一些日志</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">tar -zxvf frp_0.63.0_linux_amd64.tar.gz</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="comment"># 会输出一些日志</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">mv</span> frp_0.63.0_linux_amd64 frp <span class="comment"># 改个名字方便后续操作</span></span></span><br></pre></td></tr></table></figure>
+<p>编辑配置文件</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> frp</span><br><span class="line">$ nano frps.toml <span class="comment"># 这里frps中的s代表server服务端</span></span><br></pre></td></tr></table></figure>
+<p>编辑<code>frps.toml</code></p>
+<figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">bindPort</span> = <span class="number">7000</span></span><br><span class="line"><span class="attr">auth.method</span> = <span class="string">&quot;token&quot;</span></span><br><span class="line"><span class="attr">auth.token</span> = <span class="string">&quot;和树莓派一样的密码&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="section">[webServer]</span> <span class="comment"># 开dashboard功能，不需要可以不配置</span></span><br><span class="line"><span class="attr">addr</span> = <span class="string">&quot;127.0.0.1&quot;</span> <span class="comment"># 不暴露在公网，可通过ssh隧道访问，要暴露在公网则为&quot;0.0.0.0&quot;</span></span><br><span class="line"><span class="attr">port</span> = <span class="number">7500</span></span><br><span class="line"><span class="attr">user</span> = <span class="string">&quot;?&quot;</span></span><br><span class="line"><span class="attr">password</span> = <span class="string">&quot;********&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="后台运行frp"><a class="markdownIt-Anchor" href="#后台运行frp"></a> 后台运行frp</h2>
+<p>同树莓派端操作</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt install tmux</span><br></pre></td></tr></table></figure>
+<p>开放frp监听的端口7000和mc服务器用到的端口25565</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">ufw allow 7000/tcp</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">ufw allow 25565/tcp</span></span><br></pre></td></tr></table></figure>
+<p>打开一个新窗口运行frp</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ tmux new -s &lt;服务名字&gt;</span><br><span class="line">$ <span class="built_in">cd</span> /usr/local/frp</span><br><span class="line">$ ./frps -c frps.toml</span><br><span class="line"><span class="comment"># Ctrl+B再按D，退出窗口</span></span><br></pre></td></tr></table></figure>
+<p>重回窗口</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">tmux attach -t &lt;服务名字&gt;</span></span><br></pre></td></tr></table></figure>
+<p>检查功能是否开启，看到注释中的输出则正常运作</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ tmux <span class="built_in">ls</span></span><br><span class="line"><span class="comment"># frp: 1 windows (created 时间..)</span></span><br><span class="line">$ ss -tlnp | grep 7000</span><br><span class="line"><span class="comment"># 有输出则frp工作正常</span></span><br></pre></td></tr></table></figure>
+<h1 id="在树莓派中启动服务器"><a class="markdownIt-Anchor" href="#在树莓派中启动服务器"></a> 在树莓派中启动服务器</h1>
+<h2 id="编写start脚本"><a class="markdownIt-Anchor" href="#编写start脚本"></a> 编写start脚本</h2>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /usr/local/minecraft</span><br><span class="line">$ nano start.sh</span><br></pre></td></tr></table></figure>
+<p>将<code>start.sh</code>修改为如下</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">java -Xmx4G -jar fabric-server-mc.1.21.1-loader.0.17.0-launcher.1.1.0.jar nogui</span><br></pre></td></tr></table></figure>
+<p>添加执行权限</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">chmod</span> +x start.sh</span></span><br></pre></td></tr></table></figure>
+<h2 id="运行frp和服务器"><a class="markdownIt-Anchor" href="#运行frp和服务器"></a> 运行frp和服务器</h2>
+<h3 id="运行frp"><a class="markdownIt-Anchor" href="#运行frp"></a> 运行frp</h3>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ tmux new -s frp</span><br><span class="line">$ <span class="built_in">cd</span> /usr/local/frp</span><br><span class="line">$ ./frpc -c frpc.toml</span><br><span class="line"><span class="comment"># Ctrl+B再按D，退出窗口</span></span><br></pre></td></tr></table></figure>
+<h3 id="运行服务器"><a class="markdownIt-Anchor" href="#运行服务器"></a> 运行服务器</h3>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ tmux new -s mcserver</span><br><span class="line">$ <span class="built_in">cd</span> /usr/local/minecraft</span><br><span class="line">$ ./start.sh</span><br><span class="line"><span class="comment"># Ctrl+B再按D，退出窗口</span></span><br></pre></td></tr></table></figure>
+<p>检查功能是否开启，看到如下输出则正常运行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ tmux <span class="built_in">ls</span></span><br><span class="line"><span class="comment"># frp: 1 windows (created 时间..)</span></span><br><span class="line"><span class="comment"># mcserver: 1 windows (created 时间..)</span></span><br></pre></td></tr></table></figure>
+<h1 id="可选配置域名"><a class="markdownIt-Anchor" href="#可选配置域名"></a> （可选）配置域名</h1>
+<p>现在已经可以通过VPS的公网IP登录游戏进行游玩了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?.?.?.?:25565 # VPS公网IP</span><br></pre></td></tr></table></figure>
+<p>如果有自己的域名，可以登录<a target="_blank" rel="noopener" href="https://dash.cloudflare.com/">cloudflare dashboard</a>，在DNS中添加记录<br>
+示例：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">类型</td>
+<td style="text-align:left">A</td>
+</tr>
+<tr>
+<td style="text-align:left">名称（必需）</td>
+<td style="text-align:left">rasp</td>
+</tr>
+<tr>
+<td style="text-align:left">IPv4 地址（必需）</td>
+<td style="text-align:left">&lt;VPS公网IP&gt;</td>
+</tr>
+<tr>
+<td style="text-align:left">代理状态</td>
+<td style="text-align:left">仅DNS</td>
+</tr>
+</tbody>
+</table>
+<p>就可以通过你的域名登录了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rasp.&lt;你的域名&gt;:25565</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Glofy Yuan
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://tsk-glofy.github.io/p/52c73bb6.html" title="从0开始的树莓派搭建教程">https://tsk-glofy.github.io/p/52c73bb6.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/p/4bba3655.html" rel="next" title="拖更10个月，弹指一挥间">
+                  拖更10个月，弹指一挥间 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="valine-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2023 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Glofy Yuan</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">17k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1:03</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/TSK-Glofy" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  <script class="next-config" data-name="leancloud_visitors" type="application/json">{"enable":true,"app_id":"kUQK5zLaAfkoi5QhKVuJwNF6-MdYXbMMI","app_key":"GlVD2O1lhiokyGzAe4QPdMLs","server_url":"https://kuqk5zla.api.lncldglobal.com","security":false}</script>
+  <script src="/js/third-party/statistics/lean-analytics.js"></script>
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css" integrity="sha256-hLTCMFlKxdNgPXyWlSSxYN0ykJmxxq9Yt3MNfdRGWeA=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="/js/third-party/math/katex.js"></script>
+
+
+
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"kUQK5zLaAfkoi5QhKVuJwNF6-MdYXbMMI","appKey":"GlVD2O1lhiokyGzAe4QPdMLs","serverURLs":"https://kuqk5zla.api.lncldglobal.com","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":false,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/p/52c73bb6.html"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://fastly.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
+});
+</script>
+
+</body>
+</html>
