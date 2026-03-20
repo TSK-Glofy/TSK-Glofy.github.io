@@ -125,51 +125,6 @@ m除了第一位，每位数字都和n相加，加完取最后一位输出</li>
       </categories>
   </entry>
   <entry>
-    <title>COMP9321学习笔记</title>
-    <url>/p/8e3dc01a.html</url>
-    <content><![CDATA[<h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
-<p>2024T1, 这门网课作业挺有意思的，让你自己动手做一遍怎么调api，怎么用pandas。</p>
-<span id="more"></span>
-<h1 id="搭建虚拟环境"><a class="markdownIt-Anchor" href="#搭建虚拟环境"></a> 搭建虚拟环境</h1>
-<p>说实话，我也是上了这门课才知道怎么建一个虚拟环境，因为我用的windows所以我只写windows的用法。</p>
-<ol>
-<li>使用<code>win + R</code>组合键，输入<code>cmd</code>并回车</li>
-<li>决定作业路径<br>
-Assignment中提供的指令如下</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ python3 -m venv C:\path\to\my\assignment </span><br></pre></td></tr></table></figure>
-<p>  据我测试不一定正确，比如我想我的代码保存在<code>D:\YXF Study Data\2023.5 - 2025.5 UNSW\2024.2 - 2024.5 T1\COMP9321\Ass3</code>, 步骤如下</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ D: </span><br><span class="line"></span><br><span class="line"><span class="comment"># 更改路径到我的课程文件夹中</span></span><br><span class="line">$ <span class="built_in">cd</span> <span class="string">&quot;D:\YXF Study Data\2023.5 - 2025.5 UNSW\2024.2 - 2024.5 T1\COMP9321&quot;</span></span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>初始化虚拟环境</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 产生一个初始大小约20M左右名为&quot;Ass3&quot;的文件夹，约10秒</span></span><br><span class="line">$ python -m venv Ass3</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>激活虚拟环境</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> Ass3</span><br><span class="line">$ .\Scripts\activate.bat</span><br><span class="line"></span><br><span class="line"><span class="comment"># 看到前面()里带有Ass3则成功</span></span><br><span class="line">(Ass3) D:\YXF Study Data\2023.5 - 2025.5 UNSW\2024.2 - 2024.5 T1\COMP9321\Ass3&gt;</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>安装需要的库<br>
-老师多半是会提供这次作业需要什么库，名为<code>requirements.txt</code>。把这个文件放到你的作业路径中，使用如下命令安装</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通常会出现很多安装成功的提示信息</span></span><br><span class="line"><span class="comment"># 如果遇到安装问题，请邮件咨询任课老师</span></span><br><span class="line">$ pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
-<p>  如果是开放型作业，需要你生成一个<code>requirements.txt</code>供助教批作业，则输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
-<ol start="6">
-<li>用VS code打开工作区</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code <span class="string">&quot;D:\YXF Study Data\2023.5 - 2025.5 UNSW\2024.2 - 2024.5 T1\COMP9321\Ass3&quot;</span></span><br></pre></td></tr></table></figure>
-<ol start="7">
-<li>关闭虚拟环境</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用deactivate命令结束使用</span></span><br><span class="line">(Ass3) D:\YXF Study Data\2023.5 - 2025.5 UNSW\2024.2 - 2024.5 T1\COMP9321\Ass3&gt;deactivate</span><br></pre></td></tr></table></figure>
-<h1 id="作业思路"><a class="markdownIt-Anchor" href="#作业思路"></a> 作业思路</h1>
-]]></content>
-      <categories>
-        <category>学习笔记区</category>
-      </categories>
-  </entry>
-  <entry>
     <title>COMP9024学习笔记</title>
     <url>/p/826f1970.html</url>
     <content><![CDATA[<h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
@@ -274,6 +229,51 @@ Big Theta Θ<br>
 <h2 id="期末用的cheat-sheet"><a class="markdownIt-Anchor" href="#期末用的cheat-sheet"></a> 期末用的Cheat Sheet</h2>
 <p><img src="/p/826f1970/CheatSheet1.jpg" alt="826f1970" title="1"><br>
 <img src="/p/826f1970/CheatSheet2.jpg" alt="826f1970" title="2"></p>
+]]></content>
+      <categories>
+        <category>学习笔记区</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>COMP9321学习笔记</title>
+    <url>/p/8e3dc01a.html</url>
+    <content><![CDATA[<h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>2024T1, 这门网课作业挺有意思的，让你自己动手做一遍怎么调api，怎么用pandas。</p>
+<span id="more"></span>
+<h1 id="搭建虚拟环境"><a class="markdownIt-Anchor" href="#搭建虚拟环境"></a> 搭建虚拟环境</h1>
+<p>说实话，我也是上了这门课才知道怎么建一个虚拟环境，因为我用的windows所以我只写windows的用法。</p>
+<ol>
+<li>使用<code>win + R</code>组合键，输入<code>cmd</code>并回车</li>
+<li>决定作业路径<br>
+Assignment中提供的指令如下</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ python3 -m venv C:\path\to\my\assignment </span><br></pre></td></tr></table></figure>
+<p>  据我测试不一定正确，比如我想我的代码保存在<code>D:\YXF Study Data\2023.5 - 2025.5 UNSW\2024.2 - 2024.5 T1\COMP9321\Ass3</code>, 步骤如下</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ D: </span><br><span class="line"></span><br><span class="line"><span class="comment"># 更改路径到我的课程文件夹中</span></span><br><span class="line">$ <span class="built_in">cd</span> <span class="string">&quot;D:\YXF Study Data\2023.5 - 2025.5 UNSW\2024.2 - 2024.5 T1\COMP9321&quot;</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>初始化虚拟环境</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 产生一个初始大小约20M左右名为&quot;Ass3&quot;的文件夹，约10秒</span></span><br><span class="line">$ python -m venv Ass3</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>激活虚拟环境</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> Ass3</span><br><span class="line">$ .\Scripts\activate.bat</span><br><span class="line"></span><br><span class="line"><span class="comment"># 看到前面()里带有Ass3则成功</span></span><br><span class="line">(Ass3) D:\YXF Study Data\2023.5 - 2025.5 UNSW\2024.2 - 2024.5 T1\COMP9321\Ass3&gt;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>安装需要的库<br>
+老师多半是会提供这次作业需要什么库，名为<code>requirements.txt</code>。把这个文件放到你的作业路径中，使用如下命令安装</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通常会出现很多安装成功的提示信息</span></span><br><span class="line"><span class="comment"># 如果遇到安装问题，请邮件咨询任课老师</span></span><br><span class="line">$ pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
+<p>  如果是开放型作业，需要你生成一个<code>requirements.txt</code>供助教批作业，则输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>用VS code打开工作区</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code <span class="string">&quot;D:\YXF Study Data\2023.5 - 2025.5 UNSW\2024.2 - 2024.5 T1\COMP9321\Ass3&quot;</span></span><br></pre></td></tr></table></figure>
+<ol start="7">
+<li>关闭虚拟环境</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用deactivate命令结束使用</span></span><br><span class="line">(Ass3) D:\YXF Study Data\2023.5 - 2025.5 UNSW\2024.2 - 2024.5 T1\COMP9321\Ass3&gt;deactivate</span><br></pre></td></tr></table></figure>
+<h1 id="作业思路"><a class="markdownIt-Anchor" href="#作业思路"></a> 作业思路</h1>
 ]]></content>
       <categories>
         <category>学习笔记区</category>
@@ -1486,6 +1486,440 @@ We will sum up the probabilities of getting exactly two heads for each possible 
 \end{aligned}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:7.200030000000001em;vertical-align:-3.350015000000001em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:3.850015em;"><span style="top:-6.460015em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">2</span><span class="mclose">)</span></span></span><span style="top:-4.960014999999999em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"></span></span><span style="top:-2.8500149999999995em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"></span></span><span style="top:-0.7599849999999995em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:3.350015000000001em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:3.850015em;"><span style="top:-6.460015em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∩</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∩</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">2</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∩</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">3</span><span class="mclose">)</span></span></span><span style="top:-4.960014999999999em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∩</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">4</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∩</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">5</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∩</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">6</span><span class="mclose">)</span></span></span><span style="top:-2.8500149999999995em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">6</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size1">(</span></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8951079999999999em;"><span style="top:-2.3550000000000004em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.144em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size1">)</span></span></span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size1">(</span></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8951079999999999em;"><span style="top:-2.3550000000000004em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.144em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size1">)</span></span></span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size1">(</span></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8951079999999999em;"><span style="top:-2.3550000000000004em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.144em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">4</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size1">)</span></span></span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size1">(</span></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8951079999999999em;"><span style="top:-2.3550000000000004em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.144em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">5</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size1">)</span></span></span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size1">(</span></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8951079999999999em;"><span style="top:-2.3550000000000004em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.144em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">6</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size1">)</span></span></span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span></span></span><span style="top:-0.7599849999999995em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">2</span><span class="mord">5</span><span class="mord">7</span><span class="mord">8</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:3.350015000000001em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>]]></content>
       <categories>
         <category>初期测试存档</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>DspFindSeed：从 WPF XAML 到 WebView2 的 GUI 迁移记录</title>
+    <url>/p/464d6575.html</url>
+    <content><![CDATA[<h1 id="dspfindseed从-wpf-xaml-到-webview2-的-gui-迁移记录"><a class="markdownIt-Anchor" href="#dspfindseed从-wpf-xaml-到-webview2-的-gui-迁移记录"></a> DspFindSeed：从 WPF XAML 到 WebView2 的 GUI 迁移记录</h1>
+<blockquote>
+<p>本文记录了将戴森球计划种子搜索工具的界面从传统 WPF XAML 迁移到 WPF + WebView2（HTML/CSS/JS）的完整过程、每一步的设计考量，以及踩过的坑。</p>
+</blockquote>
+<h2 id="背景为什么要迁移"><a class="markdownIt-Anchor" href="#背景为什么要迁移"></a> 背景：为什么要迁移？</h2>
+<p>DspFindSeed 是一个为《戴森球计划》制作的种子搜索工具，它复刻了游戏的程序化生成算法，允许玩家在游戏外快速搜索符合条件的宇宙种子。</p>
+<p>原有界面使用 WPF 的 XAML 布局，一个 18 列 × 23 行的 <code>Grid</code>，所有控件通过 <code>Grid.Row</code> 和 <code>Grid.Column</code> 硬编码定位。这种方式虽然能用，但维护困难、界面自由度低、难以实现现代化视觉效果。我们希望界面更现代、更灵活，同时保持以下约束：</p>
+<ul>
+<li><strong>保持 .NET Framework 4.8</strong>：Windows 10/11 自带运行时，用户双击 exe 直接运行，无需安装任何东西</li>
+<li><strong>体积尽可能小</strong>：不引入 Electron/CefSharp 等重量级框架</li>
+<li><strong>后端逻辑不动</strong>：种子搜索算法（UniverseGen、StarGen、PlanetGen）依赖游戏 DLL，不做重写</li>
+</ul>
+<hr>
+<h2 id="技术选型与考量"><a class="markdownIt-Anchor" href="#技术选型与考量"></a> 技术选型与考量</h2>
+<h3 id="为什么不升级到-net-6"><a class="markdownIt-Anchor" href="#为什么不升级到-net-6"></a> 为什么不升级到 .NET 6+？</h3>
+<table>
+<thead>
+<tr>
+<th>方案</th>
+<th>用户体验</th>
+<th>体积影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.NET 4.8（当前）</td>
+<td>Windows 10/11 自带运行时，双击直接运行</td>
+<td>无额外体积</td>
+</tr>
+<tr>
+<td>.NET 6+ 框架依赖</td>
+<td>用户需要先安装 .NET Runtime</td>
+<td>弹出安装提示，体验差</td>
+</tr>
+<tr>
+<td>.NET 6+ 独立部署</td>
+<td>双击直接运行</td>
+<td>单个 exe 膨胀到 60-150MB+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结论</strong>：为了保持&quot;双击即用 + 体积最小&quot;的用户体验，继续使用 .NET Framework 4.8。</p>
+<h3 id="为什么选-webview2"><a class="markdownIt-Anchor" href="#为什么选-webview2"></a> 为什么选 WebView2？</h3>
+<table>
+<thead>
+<tr>
+<th>方案</th>
+<th>额外体积</th>
+<th>兼容 .NET 4.8</th>
+<th>界面自由度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WPF + HandyControl UI 库</td>
+<td>~几百 KB</td>
+<td>✅</td>
+<td>中等（仍是 XAML）</td>
+</tr>
+<tr>
+<td><strong>WPF + WebView2</strong></td>
+<td><strong>~几百 KB</strong></td>
+<td><strong>✅</strong></td>
+<td><strong>非常高（HTML/CSS）</strong></td>
+</tr>
+<tr>
+<td>CefSharp</td>
+<td>+150MB+（内嵌 Chromium）</td>
+<td>✅</td>
+<td>高</td>
+</tr>
+<tr>
+<td>Tauri</td>
+<td>~2MB</td>
+<td>❌ 需用 Rust 重写后端</td>
+<td>高</td>
+</tr>
+<tr>
+<td>Electron</td>
+<td>+200MB+（Node.js + Chromium）</td>
+<td>❌ 需完全重写</td>
+<td>高</td>
+</tr>
+</tbody>
+</table>
+<p><strong>WebView2 的核心优势</strong>：</p>
+<ol>
+<li><strong>零额外体积</strong> — Windows 10/11 已预装 Edge WebView2 Runtime，NuGet 包本身只有几百 KB</li>
+<li><strong>HTML/CSS 自由度</strong> — 可以实现任意界面效果（动画、渐变、圆角、Grid、Flexbox……）</li>
+<li><strong>后端不动</strong> — 所有 C# 搜索算法逻辑、游戏 DLL 依赖完全保留</li>
+<li><strong>调试方便</strong> — 修改 HTML 不需要重新编译 C#</li>
+</ol>
+<hr>
+<h2 id="整体架构"><a class="markdownIt-Anchor" href="#整体架构"></a> 整体架构</h2>
+<h3 id="重构前"><a class="markdownIt-Anchor" href="#重构前"></a> 重构前</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">┌──────────────────────────────────────────┐</span><br><span class="line">│  WPF XAML (DspSearchSeed.xaml)           │</span><br><span class="line">│  18列 × 23行 Grid 硬编码布局              │</span><br><span class="line">│  控件通过 x:Name 直接绑定 C# 字段          │</span><br><span class="line">├──────────────────────────────────────────┤</span><br><span class="line">│     C# Code-Behind                       │</span><br><span class="line">│  DspSearchSeed.xaml.cs — 数据模型 + 字段  │</span><br><span class="line">│  MainWindow.cs — UI 事件处理 + 搜索逻辑   │</span><br><span class="line">└──────────────────────────────────────────┘</span><br></pre></td></tr></table></figure>
+<h3 id="重构后"><a class="markdownIt-Anchor" href="#重构后"></a> 重构后</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">┌─────────────────────────────────────────────────┐</span><br><span class="line">│  HTML/CSS/JS (web/index.html)                   │</span><br><span class="line">│  现代化暗色主题，卡片式布局                       │</span><br><span class="line">│  CSS Grid / Flexbox 自适应排列                   │</span><br><span class="line">├─────── WebView2 通信桥梁 ────────────────────────┤</span><br><span class="line">│  JS → C#: window.chrome.webview.postMessage()   │</span><br><span class="line">│  C# → JS: PostWebMessageAsJson()                │</span><br><span class="line">├─────────────────────────────────────────────────┤</span><br><span class="line">│  C# 后端逻辑 (完全不变)                          │</span><br><span class="line">│  UniverseGen / StarGen / PlanetGen              │</span><br><span class="line">│  搜索逻辑 / CSV 导出 / JSON 配置                 │</span><br><span class="line">└─────────────────────────────────────────────────┘</span><br></pre></td></tr></table></figure>
+<p><strong>核心思路</strong>：XAML 只保留一个 WebView2 控件作为容器，所有 UI 逻辑交给 HTML/CSS/JS，C# 只负责后端计算和系统交互（文件对话框、线程管理等）。只替换了&quot;View 层&quot;，Model 和 Controller 几乎不变。</p>
+<hr>
+<h2 id="逐步改动详解"><a class="markdownIt-Anchor" href="#逐步改动详解"></a> 逐步改动详解</h2>
+<h3 id="第一步安装-webview2-nuget-包"><a class="markdownIt-Anchor" href="#第一步安装-webview2-nuget-包"></a> 第一步：安装 WebView2 NuGet 包</h3>
+<p><strong>文件变更</strong>：<code>packages.config</code>、<code>DspFindSeed.csproj</code></p>
+<p>在 NuGet 包管理器中安装 <code>Microsoft.Web.WebView2</code>，会自动：</p>
+<ol>
+<li>在 <code>packages.config</code> 中添加：</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">package</span> <span class="attr">id</span>=<span class="string">&quot;Microsoft.Web.WebView2&quot;</span> <span class="attr">version</span>=<span class="string">&quot;1.0.2792.45&quot;</span> <span class="attr">targetFramework</span>=<span class="string">&quot;net48&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>在 <code>.csproj</code> 中添加三个 DLL 引用：</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 核心 API --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Reference</span> <span class="attr">Include</span>=<span class="string">&quot;Microsoft.Web.WebView2.Core&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">HintPath</span>&gt;</span>..\packages\Microsoft.Web.WebView2.1.0.2792.45\lib\net462\Microsoft.Web.WebView2.Core.dll<span class="tag">&lt;/<span class="name">HintPath</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Reference</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- WPF 控件封装 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Reference</span> <span class="attr">Include</span>=<span class="string">&quot;Microsoft.Web.WebView2.Wpf&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">HintPath</span>&gt;</span>..\packages\Microsoft.Web.WebView2.1.0.2792.45\lib\net462\Microsoft.Web.WebView2.Wpf.dll<span class="tag">&lt;/<span class="name">HintPath</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Reference</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- WPF 内部依赖 WinForms 组件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Reference</span> <span class="attr">Include</span>=<span class="string">&quot;Microsoft.Web.WebView2.WinForms&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">HintPath</span>&gt;</span>..\packages\Microsoft.Web.WebView2.1.0.2792.45\lib\net462\Microsoft.Web.WebView2.WinForms.dll<span class="tag">&lt;/<span class="name">HintPath</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Reference</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>在 <code>.csproj</code> 末尾导入构建 targets：</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Import</span> <span class="attr">Project</span>=<span class="string">&quot;..\packages\Microsoft.Web.WebView2.1.0.2792.45\build\Microsoft.Web.WebView2.targets&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>背后的考量</strong>：</p>
+<ul>
+<li><code>lib/net462/</code> 目录的 DLL 兼容 .NET 4.6.2+，当然也兼容 4.8</li>
+<li><code>Microsoft.Web.WebView2.targets</code> 会在编译后自动复制 <code>WebView2Loader.dll</code>（原生加载器）到输出目录，程序运行时通过它连接系统中已安装的 Edge WebView2 Runtime</li>
+<li>虽然我们用的是 WPF，但 WPF 控件内部依赖 WinForms 组件，所以必须三个 DLL 都引用，否则运行时报错</li>
+<li>项目已有 <code>Newtonsoft.Json</code> 依赖，直接复用它来做 JS ↔ C# 的 JSON 序列化</li>
+</ul>
+<hr>
+<h3 id="第二步将-xaml-界面替换为-webview2-控件"><a class="markdownIt-Anchor" href="#第二步将-xaml-界面替换为-webview2-控件"></a> 第二步：将 XAML 界面替换为 WebView2 控件</h3>
+<p><strong>文件变更</strong>：<code>DspSearchSeed.xaml</code></p>
+<p><strong>改造前</strong> — 395 行 XAML：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Window</span> <span class="attr">...</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Grid</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 18列定义 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Grid.ColumnDefinitions</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ColumnDefinition</span> <span class="attr">Width</span>=<span class="string">&quot;60&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ColumnDefinition</span> <span class="attr">Width</span>=<span class="string">&quot;10&quot;</span>/&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- ... 16 个 ColumnDefinition --&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">Grid.ColumnDefinitions</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 23行定义 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Grid.RowDefinitions</span>&gt;</span>...<span class="tag">&lt;/<span class="name">Grid.RowDefinitions</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">Label</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;0&quot;</span> <span class="attr">Grid.Column</span>=<span class="string">&quot;0&quot;</span> <span class="attr">Content</span>=<span class="string">&quot;种子ID:&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">TextBox</span> <span class="attr">x:Name</span>=<span class="string">&quot;seedID&quot;</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;0&quot;</span> <span class="attr">Grid.Column</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- ... 几百行控件定义 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Window</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>改造后</strong> — 12 行 XAML：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Window</span> <span class="attr">x:Class</span>=<span class="string">&quot;DspFindSeed.MainWindow&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:wv2</span>=<span class="string">&quot;clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Title</span>=<span class="string">&quot;DspFindSeed&quot;</span> <span class="attr">Height</span>=<span class="string">&quot;850&quot;</span> <span class="attr">Width</span>=<span class="string">&quot;800&quot;</span> <span class="attr">Background</span>=<span class="string">&quot;#1a1a2e&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">WindowStartupLocation</span>=<span class="string">&quot;CenterScreen&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Grid</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">wv2:WebView2</span> <span class="attr">x:Name</span>=<span class="string">&quot;webView&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Window</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>背后的考量</strong>：</p>
+<ul>
+<li><code>xmlns:wv2</code> 声明引入 WebView2 的 WPF 命名空间</li>
+<li>只放一个 <code>WebView2</code> 控件，让它自动填满整个窗口</li>
+<li><code>Background=&quot;#1a1a2e&quot;</code> 和 HTML 的背景色保持一致，<strong>避免 WebView2 加载时出现白色闪烁</strong></li>
+<li>窗口尺寸 800×850 适配 HTML 内容的纵向布局</li>
+<li>XAML 从 395 行降到 12 行，所有布局能力转移到 HTML/CSS</li>
+</ul>
+<hr>
+<h3 id="第三步重写-code-behind建立-js-c-通信桥梁"><a class="markdownIt-Anchor" href="#第三步重写-code-behind建立-js-c-通信桥梁"></a> 第三步：重写 Code-Behind，建立 JS ↔ C# 通信桥梁</h3>
+<p><strong>文件变更</strong>：<code>DspSearchSeed.xaml.cs</code></p>
+<p>这是整个迁移的<strong>核心设计</strong>。原来 C# 直接通过 <code>x:Name</code> 操作 XAML 控件（如 <code>seedID.Text</code>、<code>resource0.Text</code>），现在改为通过 <strong>JSON 消息</strong> 双向通信。</p>
+<h4 id="通信流程"><a class="markdownIt-Anchor" href="#通信流程"></a> 通信流程</h4>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">用户操作 → JS 收集表单数据 → postMessage(&#123;action, data&#125;) → C#</span><br><span class="line">    ↓</span><br><span class="line">C# OnWebMessageReceived 解析 JSON → switch(action) 分发处理</span><br><span class="line">    ↓</span><br><span class="line">C# 处理完毕 → PostMessage(&#123;action, result&#125;) → JS</span><br><span class="line">    ↓</span><br><span class="line">JS addEventListener(&#x27;message&#x27;) 接收 → 更新界面</span><br></pre></td></tr></table></figure>
+<h4 id="webview2-初始化"><a class="markdownIt-Anchor" href="#webview2-初始化"></a> WebView2 初始化</h4>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">async</span> <span class="keyword">void</span> <span class="title">InitWebView</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 异步初始化 WebView2 环境</span></span><br><span class="line">    <span class="keyword">await</span> webView.EnsureCoreWebView2Async(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 注册消息接收</span></span><br><span class="line">    webView.CoreWebView2.WebMessageReceived += OnWebMessageReceived;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 加载本地 HTML 文件</span></span><br><span class="line">    <span class="built_in">string</span> htmlPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, <span class="string">&quot;web&quot;</span>, <span class="string">&quot;index.html&quot;</span>);</span><br><span class="line">    webView.CoreWebView2.Navigate(<span class="keyword">new</span> Uri(htmlPath).AbsoluteUri);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>踩坑</strong>：<code>EnsureCoreWebView2Async</code> 是异步的，必须 <code>await</code> 后才能访问 <code>CoreWebView2</code>，否则它是 <code>null</code>。</p>
+<h4 id="消息分发器统一入口"><a class="markdownIt-Anchor" href="#消息分发器统一入口"></a> 消息分发器（统一入口）</h4>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnWebMessageReceived</span>(<span class="params"><span class="built_in">object</span> sender, CoreWebView2WebMessageReceivedEventArgs e</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">var</span> msg = JsonConvert.DeserializeObject&lt;Dictionary&lt;<span class="built_in">string</span>, <span class="built_in">object</span>&gt;&gt;(e.WebMessageAsJson);</span><br><span class="line">    <span class="built_in">string</span> action = msg[<span class="string">&quot;action&quot;</span>].ToString();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">switch</span> (action)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;init&quot;</span>:          SendInitData();                    <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;startSearch&quot;</span>:   HandleStartSearch(msg);            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;stopSearch&quot;</span>:    HandleStopSearch();                <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;addNecessary&quot;</span>:  HandleAddCondition(msg, <span class="literal">true</span>);     <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;addLog&quot;</span>:        HandleAddCondition(msg, <span class="literal">false</span>);    <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;deleteCondition&quot;</span>:  HandleDeleteCondition(msg);     <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;selectCondition&quot;</span>:  HandleSelectCondition(msg);     <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;importCondition&quot;</span>:  HandleImportCondition();        <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;exportCondition&quot;</span>:  HandleExportCondition(msg);     <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;importSeedFile&quot;</span>:   HandleImportSeedFile();         <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;saveConfig&quot;</span>:       HandleSaveConfig(msg);          <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>为什么用 <code>Dictionary&lt;string, object&gt;</code> 而不是强类型？</strong><br>
+前端发来的消息结构各不相同——有的带 <code>condition</code>，有的带 <code>data</code>，有的只有 <code>action</code>。用 Dictionary 做第一层解析，然后在各个 Handler 里再精确反序列化，更灵活。</p>
+<p><strong>为什么不用 <code>AddHostObjectToScript</code>？</strong><br>
+<code>AddHostObjectToScript</code> 需要给 C# 对象标注 <code>[ClassInterface]</code> 和 <code>[ComVisible]</code> 属性，调用方式也比较复杂。JSON 消息更简单直观，类似前端 Redux 的 dispatch 模式，而且方便调试——所有通信都是可序列化的 JSON。</p>
+<h4 id="线程安全dispatcher"><a class="markdownIt-Anchor" href="#线程安全dispatcher"></a> 线程安全：Dispatcher</h4>
+<p>搜索在后台线程运行，但 WebView2 的 <code>PostWebMessageAsJson</code> 必须在 UI 线程调用：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">PostMessage</span>(<span class="params"><span class="built_in">object</span> data</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">string</span> json = JsonConvert.SerializeObject(data);</span><br><span class="line">    <span class="keyword">this</span>.Dispatcher.BeginInvoke((ThreadStart)(() =&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        webView.CoreWebView2.PostWebMessageAsJson(json);</span><br><span class="line">    &#125;));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>为什么用 <code>BeginInvoke</code> 而不是 <code>Invoke</code>？</strong><br>
+<code>Invoke</code> 是同步的——搜索线程会等待 UI 线程处理完才继续。如果 UI 线程正好在等搜索线程的某个锁，就会<strong>死锁</strong>。<code>BeginInvoke</code> 是异步的，投递消息后立即返回，不会阻塞搜索线程。</p>
+<h4 id="消息协议总结"><a class="markdownIt-Anchor" href="#消息协议总结"></a> 消息协议总结</h4>
+<p><strong>JS → C# 的消息</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>action</th>
+<th>用途</th>
+<th>携带数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>init</code></td>
+<td>页面加载完成，请求初始化数据</td>
+<td>无</td>
+</tr>
+<tr>
+<td><code>startSearch</code></td>
+<td>开始搜索</td>
+<td><code>data: &#123; searchType, seedId, onceCount, times, fileName, magCount, bluePlanetCount, oPlanetCount, minStarCount, maxStarCount &#125;</code></td>
+</tr>
+<tr>
+<td><code>stopSearch</code></td>
+<td>终止搜索</td>
+<td>无</td>
+</tr>
+<tr>
+<td><code>addNecessary</code></td>
+<td>添加必须条件</td>
+<td><code>condition: &#123; planetCount1, starType, resourceCount, ... &#125;</code></td>
+</tr>
+<tr>
+<td><code>addLog</code></td>
+<td>添加仅记录条件</td>
+<td>同上</td>
+</tr>
+<tr>
+<td><code>deleteCondition</code></td>
+<td>删除条件</td>
+<td><code>index, isLog</code></td>
+</tr>
+<tr>
+<td><code>selectCondition</code></td>
+<td>选中条件查看详情</td>
+<td><code>index, isLog</code></td>
+</tr>
+<tr>
+<td><code>importCondition</code></td>
+<td>导入条件文件</td>
+<td>无（C# 弹系统文件对话框）</td>
+</tr>
+<tr>
+<td><code>exportCondition</code></td>
+<td>导出条件文件</td>
+<td><code>fileName</code></td>
+</tr>
+<tr>
+<td><code>importSeedFile</code></td>
+<td>导入种子ID CSV</td>
+<td>无（C# 弹系统文件对话框）</td>
+</tr>
+<tr>
+<td><code>saveConfig</code></td>
+<td>保存配置到 JSON</td>
+<td><code>data: &#123; onceCount, times, ... &#125;</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>C# → JS 的消息</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>action</th>
+<th>用途</th>
+<th>携带数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>initData</code></td>
+<td>返回初始化数据</td>
+<td><code>config, starCounts, necessaryCount, logCount</code></td>
+</tr>
+<tr>
+<td><code>conditionUpdated</code></td>
+<td>条件列表变化</td>
+<td><code>necessaryCount, logCount</code></td>
+</tr>
+<tr>
+<td><code>conditionData</code></td>
+<td>返回条件详情</td>
+<td><code>condition: &#123; ... &#125;</code></td>
+</tr>
+<tr>
+<td><code>searchProgress</code></td>
+<td>搜索进度更新</td>
+<td><code>curId, time, seeds, lastSeed, progress</code></td>
+</tr>
+<tr>
+<td><code>searchComplete</code></td>
+<td>搜索完成</td>
+<td><code>message, time, seeds, lastSeed, progress</code></td>
+</tr>
+<tr>
+<td><code>searchStopped</code></td>
+<td>搜索被终止</td>
+<td><code>curId, curSeeds, lastSeedId</code></td>
+</tr>
+<tr>
+<td><code>error</code></td>
+<td>错误消息</td>
+<td><code>message</code></td>
+</tr>
+<tr>
+<td><code>info</code></td>
+<td>信息提示</td>
+<td><code>message</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="第四步创建-htmlcss-前端界面"><a class="markdownIt-Anchor" href="#第四步创建-htmlcss-前端界面"></a> 第四步：创建 HTML/CSS 前端界面</h3>
+<p><strong>新增文件</strong>：<code>web/index.html</code></p>
+<p>整个前端是一个<strong>单文件 HTML</strong>（~730行），包含内联 CSS 和 JS。</p>
+<h4 id="设计语言"><a class="markdownIt-Anchor" href="#设计语言"></a> 设计语言</h4>
+<ul>
+<li><strong>深色主题</strong>：背景 <code>#0f0f23</code>，卡片 <code>#1a1a2e</code>，与戴森球计划的太空氛围一致</li>
+<li><strong>CSS 变量</strong>：统一管理颜色，方便后续主题切换</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">    <span class="attr">--bg-primary</span>: <span class="number">#0f0f23</span>;    <span class="comment">/* 页面背景 */</span></span><br><span class="line">    <span class="attr">--bg-card</span>: <span class="number">#1a1a2e</span>;       <span class="comment">/* 卡片背景 */</span></span><br><span class="line">    <span class="attr">--bg-input</span>: <span class="number">#16213e</span>;      <span class="comment">/* 输入框背景 */</span></span><br><span class="line">    <span class="attr">--border</span>: <span class="number">#2a2a4a</span>;        <span class="comment">/* 边框 */</span></span><br><span class="line">    <span class="attr">--text</span>: <span class="number">#e0e0e0</span>;          <span class="comment">/* 正文 */</span></span><br><span class="line">    <span class="attr">--text-muted</span>: <span class="number">#8888aa</span>;    <span class="comment">/* 次要文字 */</span></span><br><span class="line">    <span class="attr">--accent</span>: <span class="number">#4fc3f7</span>;        <span class="comment">/* 强调色（亮蓝） */</span></span><br><span class="line">    <span class="attr">--success</span>: <span class="number">#66bb6a</span>;       <span class="comment">/* 成功（绿） */</span></span><br><span class="line">    <span class="attr">--danger</span>: <span class="number">#ef5350</span>;        <span class="comment">/* 危险（红） */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="界面分区6-个卡片"><a class="markdownIt-Anchor" href="#界面分区6-个卡片"></a> 界面分区（6 个卡片）</h4>
+<ol>
+<li><strong>搜索参数</strong> — 种子ID、单次搜索数、总次数、恒星数范围</li>
+<li><strong>全局条件</strong> — 磁石总量、蓝巨星数、O恒星数（整个宇宙的独立条件）</li>
+<li><strong>星系筛选条件</strong> — 卫星数、潮汐锁定、行星总数、光度、初始距离、戴森球包含、重氢速率、星系类型、星球类型（6个下拉框）</li>
+<li><strong>矿物资源条件</strong> — 13 种矿物数量输入 + 原油/水/硫酸 布尔条件</li>
+<li><strong>条件管理</strong> — 添加必须条件/仅记录条件、删除、保存配置、条件选择器</li>
+<li><strong>操作区</strong> — 搜索类型选择、开始/终止、导入/导出、文件名、进度条、日志</li>
+</ol>
+<h4 id="布局技巧"><a class="markdownIt-Anchor" href="#布局技巧"></a> 布局技巧</h4>
+<p><strong>矿物网格</strong>（CSS Grid 自适应）：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.resource-grid</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: grid;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="built_in">repeat</span>(auto-fill, <span class="built_in">minmax</span>(<span class="number">120px</span>, <span class="number">1</span>fr));</span><br><span class="line">    <span class="attribute">gap</span>: <span class="number">6px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>auto-fill + minmax</code> 让矿物输入框根据窗口宽度自动排列，比 XAML 的硬编码 Grid 灵活得多。</p>
+<p><strong>星球类型网格</strong>（固定3列）：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.planet-grid</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: grid;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="built_in">repeat</span>(<span class="number">3</span>, <span class="number">1</span>fr);</span><br><span class="line">    <span class="attribute">gap</span>: <span class="number">6px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Tooltip 纯 CSS 实现</strong>（无需 JS 库）：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.has-tooltip</span><span class="selector-pseudo">:hover</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">attr</span>(data-tip);</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateX</span>(-<span class="number">50%</span>);</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#333</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">6px</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="js-端关键函数"><a class="markdownIt-Anchor" href="#js-端关键函数"></a> JS 端关键函数</h4>
+<ul>
+<li><code>init()</code> — 页面加载时填充星球类型下拉框，请求 C# 发送配置</li>
+<li><code>collectCondition()</code> — 从所有表单元素收集一个完整的条件对象</li>
+<li><code>applyCondition(c)</code> — 将条件对象回填到表单（用于查看已保存条件）</li>
+<li><code>startSearch()</code> — 收集搜索参数，发送给 C#</li>
+<li><code>updateProgress(msg)</code> — 更新进度条和日志</li>
+<li><code>appendLog(text)</code> — 带时间戳的日志追加</li>
+</ul>
+<hr>
+<h3 id="第五步配置-html-文件自动复制到输出目录"><a class="markdownIt-Anchor" href="#第五步配置-html-文件自动复制到输出目录"></a> 第五步：配置 HTML 文件自动复制到输出目录</h3>
+<p>在 <code>.csproj</code> 中添加：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ItemGroup</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Content</span> <span class="attr">Include</span>=<span class="string">&quot;web\index.html&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">CopyToOutputDirectory</span>&gt;</span>PreserveNewest<span class="tag">&lt;/<span class="name">CopyToOutputDirectory</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Content</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ItemGroup</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>背后的考量</strong>：</p>
+<ul>
+<li><code>PreserveNewest</code> 表示只在源文件比目标新时才复制，加快增量编译</li>
+<li>编译后 <code>bin/Debug/web/index.html</code> 自动就位，<code>Navigate</code> 时能找到</li>
+<li>选择加载本地文件而非 <code>NavigateToString</code> 嵌入字符串，是为了：
+<ul>
+<li>调试时可以直接编辑 HTML，不需要重新编译 C#</li>
+<li>后续可以拆分为多个文件（CSS、JS 分离）</li>
+<li>路径可控，容易管理</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="遇到的坑"><a class="markdownIt-Anchor" href="#遇到的坑"></a> 遇到的坑</h2>
+<h3 id="1-游戏-dll-引用路径"><a class="markdownIt-Anchor" href="#1-游戏-dll-引用路径"></a> 1. 游戏 DLL 引用路径</h3>
+<p>项目依赖戴森球计划游戏目录中的 4 个 DLL（<code>Assembly-CSharp.dll</code>、<code>UnityEngine.dll</code>、<code>UnityEngine.CoreModule.dll</code>、<code>UnityEngine.SharedInternalsModule.dll</code>）。原作者用的是深层相对路径 <code>..\..\..\..\..\..\Program Files (x86)\Steam\...</code>，换一台机器路径不对就编译失败。</p>
+<p><strong>解决</strong>：修改 <code>.csproj</code> 中的 <code>HintPath</code> 为实际的游戏安装路径。</p>
+<h3 id="2-nuget-包还原"><a class="markdownIt-Anchor" href="#2-nuget-包还原"></a> 2. NuGet 包还原</h3>
+<p>克隆项目后首次编译，需要先右键解决方案 → “还原 NuGet 程序包”，否则 WebView2 和 Newtonsoft.Json 的 DLL 找不到，会报大量 CS0246 错误。</p>
+<h3 id="3-webview2-初始化是异步的"><a class="markdownIt-Anchor" href="#3-webview2-初始化是异步的"></a> 3. WebView2 初始化是异步的</h3>
+<p><code>EnsureCoreWebView2Async(null)</code> 必须 <code>await</code> 后才能操作 <code>CoreWebView2</code>，否则它是 <code>null</code>，任何操作都会抛 <code>NullReferenceException</code>。</p>
+<h3 id="4-后台线程不能直接操作-webview2"><a class="markdownIt-Anchor" href="#4-后台线程不能直接操作-webview2"></a> 4. 后台线程不能直接操作 WebView2</h3>
+<p>搜索线程直接调用 <code>PostWebMessageAsJson</code> 会抛线程访问异常。必须通过 <code>Dispatcher.BeginInvoke</code> 调度到 UI 线程。</p>
+<h3 id="5-窗口背景色闪烁"><a class="markdownIt-Anchor" href="#5-窗口背景色闪烁"></a> 5. 窗口背景色闪烁</h3>
+<p>WebView2 控件加载 HTML 需要短暂时间，这期间如果 WPF 窗口背景是默认的白色，用户会看到一次白色→深色的闪烁。解决方法是把 XAML 的 <code>Background</code> 设为和 HTML 背景一致的 <code>#1a1a2e</code>。</p>
+<hr>
+<h2 id="文件结构"><a class="markdownIt-Anchor" href="#文件结构"></a> 文件结构</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">DspFindSeed/</span><br><span class="line">├── DspSearchSeed.xaml          # WPF 窗口（只含一个 WebView2 控件）</span><br><span class="line">├── DspSearchSeed.xaml.cs       # 消息处理器（JS ↔ C# 通信桥梁）</span><br><span class="line">├── MainWindow.cs               # 搜索核心逻辑（未改动）</span><br><span class="line">├── web/</span><br><span class="line">│   └── index.html              # 前端界面（HTML + CSS + JS 单文件）</span><br><span class="line">├── LDB/                        # 游戏数据定义</span><br><span class="line">│   ├── LDB.cs</span><br><span class="line">│   └── ThemeProtoSet.cs</span><br><span class="line">├── PlanetManager/              # 行星管理算法</span><br><span class="line">│   ├── PlanetAlgorithm.cs</span><br><span class="line">│   └── PlanetModelingManager.cs</span><br><span class="line">├── StarGen.cs                  # 恒星生成算法</span><br><span class="line">├── UniverseGen.cs              # 宇宙生成算法</span><br><span class="line">├── PlanetGen.cs                # 行星生成算法</span><br><span class="line">├── GameDesc.cs                 # 游戏配置描述</span><br><span class="line">├── CsvUtil.cs                  # CSV 读写工具</span><br><span class="line">├── App.xaml                    # WPF 应用入口</span><br><span class="line">├── App.config                  # 应用配置</span><br><span class="line">└── packages.config             # NuGet 依赖清单</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="编译与运行"><a class="markdownIt-Anchor" href="#编译与运行"></a> 编译与运行</h2>
+<h3 id="环境要求"><a class="markdownIt-Anchor" href="#环境要求"></a> 环境要求</h3>
+<ul>
+<li>Visual Studio 2019 或 2022+</li>
+<li>.NET Framework 4.8 Targeting Pack</li>
+<li>戴森球计划游戏（需要其 Managed DLL）</li>
+</ul>
+<h3 id="编译步骤"><a class="markdownIt-Anchor" href="#编译步骤"></a> 编译步骤</h3>
+<ol>
+<li>打开 <code>DspFindSeed.sln</code></li>
+<li>右键解决方案 → “还原 NuGet 程序包”</li>
+<li>如果游戏 DLL 路径不对，修改 <code>.csproj</code> 中的 <code>HintPath</code></li>
+<li><code>Ctrl+B</code> 编译</li>
+</ol>
+<h3 id="运行"><a class="markdownIt-Anchor" href="#运行"></a> 运行</h3>
+<p>编译产物在 <code>bin/Debug/</code> 目录：</p>
+<ul>
+<li><code>DspFindSeed.exe</code> — 主程序</li>
+<li><code>web/index.html</code> — 前端界面（自动复制）</li>
+<li><code>WebView2Loader.dll</code> — WebView2 原生加载器（自动复制）</li>
+</ul>
+<p>双击 <code>DspFindSeed.exe</code> 即可运行。要求 Windows 10 1803+ 或 Windows 11（已预装 WebView2 Runtime）。</p>
+<hr>
+<h2 id="后续可以做的"><a class="markdownIt-Anchor" href="#后续可以做的"></a> 后续可以做的</h2>
+<ol>
+<li><strong>拆分前端文件</strong> — 目前 index.html 是单文件（~730行），可以拆分 CSS 和 JS 为独立文件</li>
+<li><strong>引入前端框架</strong> — 如 Vue.js（CDN 引入），处理更复杂的状态管理</li>
+<li><strong>界面热更新</strong> — 因为 HTML 是外部文件，可以在不重新编译 C# 的情况下修改界面</li>
+<li><strong>搜索结果可视化</strong> — 用 Canvas/SVG 绘制星图，用 Chart.js 展示数据分布</li>
+<li><strong>深色/浅色主题切换</strong> — 已有 CSS 变量体系，切换只需覆盖变量值</li>
+<li><strong>多语言支持</strong> — HTML 层面做 i18n 比 XAML 简单得多</li>
+</ol>
+<hr>
+<h2 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>改造前</th>
+<th>改造后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>界面技术</td>
+<td>WPF XAML (395行)</td>
+<td>HTML/CSS/JS (730行) + XAML (12行)</td>
+</tr>
+<tr>
+<td>布局方式</td>
+<td>18×23 硬编码 Grid</td>
+<td>CSS Flexbox + Grid 自适应</td>
+</tr>
+<tr>
+<td>数据绑定</td>
+<td>x:Name 直接引用控件</td>
+<td>JSON 消息双向通信</td>
+</tr>
+<tr>
+<td>视觉效果</td>
+<td>WPF 原生控件</td>
+<td>自定义暗色主题、卡片式布局</td>
+</tr>
+<tr>
+<td>后端逻辑</td>
+<td>不变</td>
+<td>不变</td>
+</tr>
+<tr>
+<td>额外依赖</td>
+<td>无</td>
+<td>WebView2 NuGet (~几百KB)</td>
+</tr>
+<tr>
+<td>用户体验</td>
+<td>双击即用</td>
+<td>双击即用（不变）</td>
+</tr>
+</tbody>
+</table>]]></content>
+      <categories>
+        <category>AI辅助编辑</category>
       </categories>
   </entry>
 </search>
